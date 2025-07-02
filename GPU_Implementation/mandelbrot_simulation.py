@@ -3,7 +3,7 @@ import numpy as np
 import numba as nb
 from numba import cuda
 
-WIDTH, HEIGHT = 1000, 800
+WIDTH, HEIGHT = 1200, 1000
 MAX_ITER = 100
 
 
@@ -162,6 +162,7 @@ def start():
         clock.tick(60)  # Limit FPS to make zooming visually smoother
 
     pygame.quit()
+    cuda.close()
 
 
 if __name__ == "__main__":
